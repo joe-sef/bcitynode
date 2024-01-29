@@ -12,14 +12,6 @@ const router = require("./router");
 app.use(router);
 app.use(cors());
 
-const corsOptions ={
-    origin:'http://localhost:3000', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200,
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-}
-app.use(cors(corsOptions));
-
 
 /**connect to mongodb */
 mongoose
