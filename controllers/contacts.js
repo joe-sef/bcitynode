@@ -27,7 +27,7 @@ const createContact = async (req, res)=>{
     contact.save().then(()=>{
         console.log("Contact saved successfully in the database");
         console.log("This is a post request");
-        res.sendStatus(200);
+        res.sendStatus({status: 200});
     }).catch((err)=>{
             console.log("There was an error saving the contact object to the database");
             console.log(err);
@@ -44,9 +44,9 @@ const updateContact = async (req, res)=>{
             }
         }
     ).then(()=>{
-        res.sendStatus(200)
+        res.sendStatus({status: 200})
     }).catch(()=>{
-        res.sendStatus(500)
+        res.sendStatus({status: 500})
     })
 }
 
