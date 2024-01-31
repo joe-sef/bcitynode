@@ -2,7 +2,7 @@
 const Contact = require("../models/contacts")
 
 const getContacts = (req, res)=>{
-    Contact.find({sort: {Name: 1}})
+    Contact.find().sort({Name: 1})
     .then((contacts)=>{
         res.send(contacts);
        
