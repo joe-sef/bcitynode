@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 
 /**connect to mongodb */
 mongoose
-  .connect(localurl, {
+  .connect(MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
