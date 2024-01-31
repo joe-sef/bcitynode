@@ -44,7 +44,7 @@ const updateContact = async (req, res)=>{
             }
         }
     ).then(()=>{
-        res.sendStatus({status: 200})
+        res.status(201).send(req.body.linkedClients);
     }).catch(()=>{
         res.sendStatus({status: 500})
     })
