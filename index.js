@@ -12,16 +12,8 @@ app.use(express.json());
 const router = require("./router");
 app.use(router);
 
-router.use(cors())
 
-const corsOptions = {
-  origin: '*', // specify the allowed origin
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true, // enable credentials (cookies, etc.)
-  optionsSuccessStatus: 204, // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 /**connect to mongodb */
 mongoose
   .connect(MONGODB_URL, {
