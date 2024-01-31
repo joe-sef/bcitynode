@@ -2,7 +2,7 @@
 const Client = require("../models/clients")
 
 const getClients = (req, res) => {
-    Client.find()
+    Client.find({sort: {Name: 1}})
         .then((clients) => {
             res.send(clients);
             console.log(clients)
