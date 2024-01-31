@@ -15,7 +15,7 @@ const getContacts = (req, res)=>{
     }
 }
 
-const createContact = (req, res)=>{
+const createContact = async (req, res)=>{
     const contact = new Contact({
         Name: req.body.Name,
         Surname: req.body.Surname,
@@ -35,7 +35,7 @@ const createContact = (req, res)=>{
     })
 }
 
-const updateContact = (req, res)=>{
+const updateContact = async (req, res)=>{
     Contact.findOneAndUpdate(
         { _id: req.params.contactID },
         {

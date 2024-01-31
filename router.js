@@ -12,5 +12,5 @@ router.post("/clients", createClient)
 router.put("/clients/:clientID", updateClient)
 router.post("/contacts", createContact)
 router.get("/contacts", getContacts)
-router.put("/contact/:contactID", updateContact)
+router.put("/contacts/:contactID", updateContact)
 module.exports = router;
