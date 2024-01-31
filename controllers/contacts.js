@@ -20,7 +20,7 @@ const createContact = async (req, res)=>{
         Name: req.body.Name,
         Surname: req.body.Surname,
         EmailAddress: req.body.EmailAddress,
-        linkedClients: [""]
+        linkedClients: []
     })
 
     
@@ -40,10 +40,9 @@ const updateContact = async (req, res)=>{
         { _id: req.params.contactID },
         {
             $set: {
-                linkedClients: "req.body.linkedClients"
+                linkedClients: req.body.linkedClients
             }
-        },
-        {new: true}
+        }
     ).then(()=>{
         res.status(201).send(req.body.linkedClients);
     }).catch(()=>{

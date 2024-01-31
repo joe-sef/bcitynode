@@ -15,6 +15,11 @@ const ContactSchema = new mongoose.Schema({
     {
         type: String,
         required: true
+    },
+    linkedClients: 
+    {
+        type: Array,
+        default: []
     }
 })
 
