@@ -7,7 +7,7 @@ const getContacts = (req, res)=>{
         res.send(contacts);
        
     }).catch((error)=>{
-        res.send(500)
+        res.status(500).send("500")
     })
     .finally
     {
@@ -30,7 +30,7 @@ const createContact = async (req, res)=>{
     }).catch((err)=>{
             console.log("There was an error saving the contact object to the database");
             console.log(err);
-            res.sendStatus(500);
+            res.status(500).send("500")
     })
 }
 
@@ -45,7 +45,7 @@ const updateContact = async (req, res)=>{
     ).then(()=>{
         res.status(201).send(req.body.linkedClients);
     }).catch(()=>{
-        res.sendStatus({status: 500})
+        res.status(500).send("500")
     })
 }
 

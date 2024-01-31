@@ -25,11 +25,11 @@ const createClient = async (req, res) => {
 
     client.save().then(() => {
         console.log("client has been saved successfully in the database");
-        res.status(200).send("200");
+        res.status(201).send("200");
     }).catch(() => {
         console.log("There was an error saving the object to the database");
 
-        res.sendStatus(500);
+        res.status(500).send("500")
     })
 }
 
@@ -44,9 +44,9 @@ const updateClient = async (req, res) => {
             }
         }
     ).then(()=>{
-        console.log(req.params.clientID)
+        res.status(201).send("200")
     }).catch(()=>{
-        res.sendStatus(500)
+        res.status(501).send("500")
     })
 
 }
