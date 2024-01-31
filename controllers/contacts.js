@@ -40,7 +40,7 @@ const updateContact = async (req, res)=>{
         { _id: req.params.contactID },
         {
             $set: {
-                linkedClients: req.body.linkedClients
+                linkedClients: "req.body.linkedClients"
             }
         },
         {new: true}
