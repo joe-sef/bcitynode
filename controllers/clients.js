@@ -25,8 +25,7 @@ const createClient = async (req, res) => {
 
     client.save().then(() => {
         console.log("client has been saved successfully in the database");
-
-        res.sendStatus(200);
+        res.status(200).send("200");
     }).catch(() => {
         console.log("There was an error saving the object to the database");
 

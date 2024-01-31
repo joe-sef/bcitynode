@@ -3,7 +3,7 @@ const router = require("express").Router();
 const { getClients, createClient, updateClient } = require("./controllers/clients");
 const { getContacts, createContact, updateContact } = require("./controllers/contacts")
 router.get("/", (req, res) => {
-  res.send("Let's build a CRUD API!");
+  res.send("Server online");
 });
 
 
